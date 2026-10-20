@@ -13,18 +13,18 @@ typedef struct {
 	char nguoiMuon[50];
 }Sach;
 
-Sach ds[Max];	
+Sach ds[MAX];	
 	int n = 0;
 	int NextId = 1;
 	
-void docDong(const char *loiNhac, char buf, int size){
+void docDong(const char *loiNhac, char *buf, int size){
 	printf("%s", loiNhac);
 	if(!fgets(buf,size,stdin)){buf[0] = 0; return;}
 	buf[strcspn(buf,"\n")] = 0;
-	for (int i=0; buf[i], i++)
+	for (int i=0; buf[i]; i++)
 	if (buf[i] == '|') buf[i] = '';
 }
-void docSo(const char *loiNhac) {
+int docSo(const char *loiNhac) {
 	char buf[32], *end;
 	while (1) {
 		printf("%s", loiNhac);
@@ -40,7 +40,7 @@ void luuFile()
 void themSach()
 	void hienThi()
 	void timSachTheoId()
-	void timSachtheoTen()
+	void timSachTheoTen()
 	void muonSach()
 	void traSach()
 	
@@ -56,7 +56,7 @@ void themSach()
 		"6. Tra Sach\n"
 		"7. Luu file\n"
 		"0. Thoat\n");
-	chon = doSo("chon: ");
+	chon = docSo("chon: ");
 	switch(chon){
 		case 1: themSach();
 		break;
@@ -64,7 +64,7 @@ void themSach()
 		break;
 		case 3: timSachTheoId();
 		break;
-		case 4: timSachtheoTen();
+		case 4: timSachTheoTen();
 		break;
 		case 5: muonSach();
 		break;
@@ -72,7 +72,7 @@ void themSach()
 		break;
 		case 7: luuFile();
 		break;
-		case 0: luuFile() 
+		case 0: luuFile();
 		printf("Tam biet va hen gap lai quy khach");
 		break;
 		default: printf("lua chon khong hop le!\n");
