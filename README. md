@@ -1,12 +1,9 @@
------------------------- HỆ THỐNG QUẢN LÝ THƯ VIỆN  -----------------------------
+------------------------ HỆ THỐNG QUẢN LÝ THƯ VIỆN ----------------------
 
 1. Giới thiệu đề tài 
 -----------------------
 Tên đề tài: xây dựng chương trình quản lý thư viện bằng ngôn ngữ C.
-
- Chương trinh hỗ trợ công việc quản lý trong thư viện, bao gồm các chức năng thêm sách,
- hiển thị danh sách, tìm sách, mượn sách, trả sách, xóa sách và lưu tệp dữ liệu vào 
- thuvien.txt
+Chương trinh hỗ trợ công việc quản lý trong thư viện, bao gồm các chức năng thêm sách,hiển thị danh sách, tìm sách, mượn sách, trả sách, xóa sách và lưu tệp dữ liệu vào thuvien.txt.
 
 2. Thành viên và phân công 
 -----------------------------
