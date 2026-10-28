@@ -27,13 +27,11 @@ Nguyễn Thị NGọc PHượng - Bổ sung thông tin cho code, readme và thuy
 
 3.4 Tìm sách theo tên:
 - Tìm sách bằng từ khóa nằm trong tên sách.
-- Việc tìm kiếm không phân biệt chữ hoa và chữ thường đối với các ký tự được hàm 
-tolower() xử lý theo locale hiện tại.
+- Việc tìm kiếm không phân biệt chữ hoa và chữ thường đối với các ký tự được hàm tolower() xử lý theo locale hiện tại.
 
 3.5 Mượn sách:
 - Nhập ID sách và tên người mượn.
-- Không cho mượn sách không tồn tại, sách đã được mượn hoặc để trống 
-tên người mượn.
+- Không cho mượn sách không tồn tại, sách đã được mượn hoặc để trống tên người mượn.
 
 3.6 Trả sách:
 - Nhập ID sách.
@@ -49,12 +47,19 @@ tên người mượn.
 3.0 Thoát chương trình:
 - Tự lưu dữ liệu trước khi kết thúc chương trình.
 
+4.Cách compile/run
+---------------------
+Yêu cầu: Trình biên dịch C hỗ trợ chuẩn C99 trở lên, chẳng hạn GCC.
 
-3. Công nghệ sử dụng
-Ngôn ngữ lập trình: C.
-Trình biên dịch: Dev C
-Môi trường phát triển: Dev C
+Compile trên Windowns:
+ gcc main.c -o quanlythuvien.exe
 
+Run programme :
+ quanlythuvien.exe
+
+Trên Linux/macOS:
+ gcc main.c -o quanlythuvien
+./quanlythuvien
 
 4. Cấu trúc dự án
 Warehouse-Inventory-Management-System/
