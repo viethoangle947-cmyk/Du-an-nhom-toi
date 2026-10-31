@@ -7,45 +7,80 @@ Chương trinh hỗ trợ công việc quản lý trong thư viện, bao gồm c
 
 2. Thành viên và phân công 
 -----------------------------
-Lê Việt Hoàng (NHÓM TRƯỞNG) - Quản lí toàn bộ dự án, code chính của dự án.
+Lê Việt Hoàng (Trưởng nhóm ) - Quản lí toàn bộ dự án, code chính của dự án.
 Nguyễn Thị NGọc PHượng - Bổ sung thông tin cho code, readme và thuyết trình cho dự án.
 
-3. CÁC CHỨC NĂNG
--------------------
+3.Hướng dẫn sử dụng
 
-3.1 Thêm sách :
-- Nhập tên sách và tác giả
-- Tên sách không được để trống.
-- Nếu không nhập tác giả, chương trình gán "Khuyết danh".
-- Mỗi sách được cấp 1 ID tự động.
+### Bước 1: Khởi động chương trình
+Sau khi biên dịch thành công, chạy tệp thực thi "quanlythuvien.exe".
+Chương trình sẽ tự động kiểm tra và đọc dữ liệu từ tệp "thuvien.txt" nếu tệp đã tồn tại.
 
-3.2 Hiển thị tất cả: 
-- Hiển thị ID, tên sách, tác giả và trạng thái mượn sách.
+### Bước 2: Lựa chọn chức năng
+Sau khi khởi động, menu chính sẽ hiển thị:
 
-3.3 Tìm sách theo ID :
-- Tìm và hiển thị sách có ID tương ứng.
+===== QUAN LY THU VIEN =====
+1. Them sach
+2. Hien thi tat ca
+3. Tim theo id
+4. Tim theo ten
+5. Muon sach
+6. Tra sach
+7. Xoa sach
+8. Luu file
+0. Thoat (tu dong luu)
+Nhập số tương ứng với chức năng muốn sử dụng.
 
-3.4 Tìm sách theo tên:
-- Tìm sách bằng từ khóa nằm trong tên sách.
-- Việc tìm kiếm không phân biệt chữ hoa và chữ thường đối với các ký tự được hàm tolower() xử lý theo locale hiện tại.
+### Bước 3: Thực hiện các chức năng
 
-3.5 Mượn sách:
-- Nhập ID sách và tên người mượn.
-- Không cho mượn sách không tồn tại, sách đã được mượn hoặc để trống tên người mượn.
+**1. Thêm sách**
+- Nhập tên sách.
+- Nhập tên tác giả.
+- Chương trình tự động cấp ID cho sách mới.
 
-3.6 Trả sách:
-- Nhập ID sách.
-- Cập nhật sách về trạng thái còn trong thư viện.
+**2. Hiển thị tất cả**
+- Hiển thị danh sách sách hiện có.
+- Bao gồm ID, tên sách, tác giả và trạng thái.
 
-3.7 Xóa sách :
-- Xóa sách theo ID sách.
-- Không xóa sách đang được mượn.
+**3. Tìm theo ID**
+- Nhập ID của cuốn sách cần tìm.
+- Chương trình hiển thị thông tin nếu tìm thấy.
 
-3.8 Lưu tệp:
-- Ghi danh sách sách hiện tại vào tệp thuvien.txt.
+**4. Tìm theo tên**
+- Nhập từ khóa liên quan đến tên sách.
+- Chương trình tìm kiếm và hiển thị những sách có tên chứa từ khóa.
 
-3.0 Thoát chương trình:
-- Tự lưu dữ liệu trước khi kết thúc chương trình.
+**5. Mượn sách**
+- Nhập ID sách cần mượn.
+- Nhập tên người mượn.
+- Chương trình cập nhật trạng thái sách thành đã mượn.
+
+**6. Trả sách**
+- Nhập ID sách cần trả.
+- Chương trình cập nhật trạng thái sách thành còn trong thư viện.
+
+**7. Xóa sách**
+- Nhập ID sách cần xóa.
+- Chỉ những sách chưa được mượn mới có thể bị xóa.
+
+**8. Lưu file**
+- Ghi toàn bộ danh sách sách hiện tại vào "thuvien.txt".
+- Dữ liệu cũ trong tệp sẽ được thay thế bằng dữ liệu mới nhất.
+
+**0. Thoát chương trình**
+- Chương trình tự động lưu dữ liệu trước khi kết thúc.
+
+### Bước 4: Kiểm tra dữ liệu
+Sau khi lưu, người dùng có thể mở tệp "thuvien.txt" bằng Notepad hoặc trình soạn thảo văn bản để kiểm tra thông tin sách đã được lưu.
+
+### Lưu ý khi sử dụng
+
+- Chương trình hỗ trợ tối đa 100 cuốn sách.
+- ID sách được cấp tự động và không cần nhập thủ công.
+- Không thể mượn một cuốn sách đang được người khác mượn.
+- Không thể xóa sách đang được mượn.
+- Không nên tự ý chỉnh sửa cấu trúc dữ liệu trong `thuvien.txt`.
+- Nên sử dụng chức năng lưu dữ liệu trước khi kết thúc chương trình.
 
 4.Cách compile/run
 ---------------------
@@ -61,54 +96,22 @@ Trên Linux/macOS:
  gcc main.c -o quanlythuvien
 ./quanlythuvien
 
-4. Cấu trúc dự án
-Warehouse-Inventory-Management-System/
+5. Cấu trúc dự án
+-----------------------
+Libraly-Management-System/
 ├── main.c
 ├── README.md
-└── .vscode/
-    └── tasks.json
-5. Yêu cầu hệ thống
-Để chạy chương trình, cần chuẩn bị:
 
-Visual Studio Code.
-Extension C/C++ của Microsoft.
-Trình biên dịch GCC đã được cài đặt và cấu hình trong PATH.
-6. Hướng dẫn cài đặt và chạy chương trình
-Bước 1: Mở thư mục dự án
-Mở thư mục chứa mã nguồn bằng Visual Studio Code.
+6.Mục đích của dự án
+- Ứng dụng kiến thức lập trình ngôn ngữ C vào việc giải quyết một bài toán quản lý thư viện.
+- Thông qua chương trình, người sử dụng có thể quản lý thông tin sách, theo dõi tình trạng mượn và trả sách, tìm kiếm cũng như lưu trữ dữ liệu một cách thuận tiện.
+- Thực hành lập trình: Củng cố kiến thức về cấu trúc dữ liệu struct, mảng, hàm, xử lý chuỗi và thao tác đọc/ghi tệp trong ngôn ngữ C.
 
-Bước 2: Biên dịch chương trình
-Mở Terminal tại thư mục dự án và chạy lệnh:
+### Mục tiêu cụ thể
 
-gcc main.c -o warehouse
-Bước 3: Chạy chương trình
-Trên Windows:
+- Quản lý thông tin: Lưu trữ thông tin sách bao gồm mã sách, tên sách, tác giả và trạng thái mượn.
+- Hỗ trợ tìm kiếm: Giúp người dùng nhanh chóng tìm thấy sách theo mã ID hoặc tên sách.
+- Theo dõi tình trạng mượn/trả: Cập nhật trạng thái sách và ghi nhận thông tin người mượn.
+- Lưu trữ dữ liệu: Sử dụng tệp văn bản "thuvien.txt" để lưu thông tin, giúp dữ liệu được duy trì sau khi kết thúc chương trình.
 
-.\warehouse.exe
-Trên Linux hoặc macOS:
-
-./warehouse
-7. Hướng dẫn sử dụng
-Khởi chạy chương trình.
-Chọn chức năng tương ứng trong menu.
-Nhập thông tin sản phẩm theo yêu cầu.
-Thực hiện các thao tác quản lý hàng hóa.
-Chọn chức năng thoát để kết thúc chương trình.
-8. Cấu trúc dữ liệu
-Mỗi sản phẩm có thể bao gồm các thông tin:
-
-Mã sản phẩm.
-Tên sản phẩm.
-Số lượng.
-Đơn giá.
-9. Mục tiêu dự án
-Vận dụng kiến thức cơ bản về lập trình C.
-Thực hành sử dụng struct, mảng, hàm và vòng lặp.
-Xây dựng các chức năng CRUD: thêm, xem, sửa và xóa dữ liệu.
-Làm quen với quy trình quản lý nhập xuất hàng hóa.
-10. Hướng phát triển
-Lưu dữ liệu vào tệp để sử dụng lại sau khi tắt chương trình.
-Bổ sung chức năng tìm kiếm sản phẩm.
-Sắp xếp danh sách sản phẩm.
-Kiểm tra dữ liệu đầu vào và xử lý lỗi.
-Thống kê số lượng hàng tồn kho và lịch sử nhập xuất.
+Dự án hướng đến việc xây dựng một chương trình quản lý thư viện đơn giản, dễ sử dụng và có khả năng mở rộng thêm các chức năng trong tương lai.
